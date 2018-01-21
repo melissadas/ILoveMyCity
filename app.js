@@ -33,7 +33,7 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8080;
 
 var server = app.listen(port, function(req,res){
   console.log("HTTP Server is running at port "+port);
