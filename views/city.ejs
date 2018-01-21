@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= city %></title>
+    <% include partials/titlepartial.ejs %>
+    
+    <style>
+     h3.headerFont{
+      font-family: advent-pro, sans-serif;
+      font-size: 30px;
+     }
+     img.img-size{
+         height: 200px;
+         width: 800px;
+     }
+    </style>    
+  </head>
+  <body>
+   
+
+        <% include partials/scripts.ejs %>
+        
+
+  <% include partials/menu.ejs %>
+    <h3 class="headerFont" align="center"><%= title %>: <%= cityHeading %></h3>
+    <br/><br/>
+    <div class="container">
+      <div class="row">
+        <% for(var i=1; i<=images; i++){%>
+            <div class="col-xs-6">
+                <div class="thumbnail">
+                        <img src="/images/<%=city%>/<%=city%>-<%=i%>.jpg" class="img-size"/>
+                </div>            
+            </div>
+
+       <% } %>
+
+      </div>
+    </div>
+
+    </body>
+  </body>
+</html>
